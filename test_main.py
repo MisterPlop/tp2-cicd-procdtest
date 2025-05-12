@@ -4,11 +4,11 @@ import time
 
 
 def test_hello():
-    assert hello() == "Hello, GitHub Actions!"
+    assert hello() == "Hello, John Doe!"
 
 
 def test_hello_custom_name():
-    assert hello("EPSI") == "Hello, EPSI!"
+    assert hello("EPSI", "DEVIAFS") == "Hello, EPSI DEVIAFS!"
 
 
 def test_hello_type_error():
@@ -22,3 +22,6 @@ def test_hello_performance():
         hello("EPSI")
     duration = time.time() - start
     assert duration < 1
+
+def test_hello_full_name():
+    assert hello("Jane", "Smith") == "Hello, Jane Smith!"

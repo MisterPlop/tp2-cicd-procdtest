@@ -1,2 +1,5 @@
 def hello(name="GitHub Actions"):
-	return f"Hello, {name}!"
+    if not isinstance(name, str):
+        raise TypeError("Le nom doit être une chaîne")
+    return f"Hello, {name}!"
+    # raise ValueError("Erreur volontaire")
